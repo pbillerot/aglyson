@@ -1,0 +1,89 @@
+{
+    "title": "Mon Blog",
+    "info": "Gestion d'un mini blog",
+    "icon_file": "blog.png",
+    "basename": "blog.sqlite",
+    "constants": {
+        "cost": 0.0047,
+        "rsimin": 20,
+        "rsimax": 70
+    },
+    "tables": {
+        "blog": {
+            "key_id": "blog_id",
+            "elements": {
+                "blog_id": {
+                    "label_long": "N°",
+                    "label_short": "N°",
+                    "type": "counter",
+                    "hide": false
+                },
+                "blog_created": {
+                    "label_long": "Créé le",
+                    "label_short": "du",
+                    "type": "text"
+                },
+                "blog_title": {
+                    "label_long": "Titre",
+                    "label_short": "Titre",
+                    "type": "text"
+                },
+                "blog_content": {
+                    "label_long": "Contenu",
+                    "label_short": "Contenu",
+                    "type": "text"
+                }
+            },
+            "views": {
+                "vall": {
+                    "title": "Actualités",
+                    "fadd": "fadd",
+                    "fedit": "fedit",
+                    "searchable": true,
+                    "deletable": true,
+                    "limit": 100,
+                    "elements": {
+                        "blog_id": {
+                        },
+                        "blog_created": {
+                        },
+                        "blog_title": {
+                        },
+                        "blog_content": {
+                        }
+                    }
+                }
+            },
+            "forms": {
+                "fadd": {
+                    "title": "Ajout d'un article",
+                    "elements": {
+                        "blog_id": {
+                        },
+                        "blog_created": {
+                        },
+                        "blog_title": {
+                        },
+                        "blog_content": {
+                        }
+                    }
+                },
+                "fedit": {
+                    "title": "Modification d'un article",
+                    "deletable": true,
+                    "elements": {
+                        "blog_id": {
+                        },
+                        "blog_created": {
+                        },
+                        "blog_title": {
+                        },
+                        "blog_content": {
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}
